@@ -1,0 +1,28 @@
+﻿  dllmain.cpp
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(849,16): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(1270,16): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(1803,16): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(3414,16): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(3506,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(3565,34): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(3651,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(3829,42): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(4105,40): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(5111,23): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(5212,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(5988,32): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\unki-dcp\dllmain.cpp(6718,47): warning C4018: <: несоответствие типов со знаком и без знака
+  BitStream.cpp
+  CEntity.cpp
+  Commands.cpp
+  Settings.cpp
+  buffer.c
+  hde32.c
+  hde64.c
+  hook.c
+  trampoline.c
+  Создание кода
+  Previous IPDB was built with incompatible compiler, fall back to full compilation.
+  All 4045 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  unki-dcp.vcxproj -> C:\Users\unki\Desktop\dcp-projects\dcp Premium\dcp-cheat-src (Premium)\Release\unki-dcp.dll

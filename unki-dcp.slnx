@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="unki-dcp/unki-dcp.vcxproj" Id="a0d974ed-8630-4f56-8d26-fc942416fa2f" />
+</Solution>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a0d974ed-8630-4f56-8d26-fc942416fa2f}</ProjectGuid>
+    <RootNamespace>unkidcp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;UNKIDCP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;UNKIDCP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)Ext</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d9.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;UNKIDCP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;UNKIDCP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Ext\BitStream.h" />
+    <ClInclude Include="Ext\buffer.h" />
+    <ClInclude Include="Ext\hde\hde32.h" />
+    <ClInclude Include="Ext\hde\hde64.h" />
+    <ClInclude Include="Ext\hde\pstdint.h" />
+    <ClInclude Include="Ext\hde\table32.h" />
+    <ClInclude Include="Ext\hde\table64.h" />
+    <ClInclude Include="Ext\icons.h" />
+    <ClInclude Include="Ext\imconfig.h" />
+    <ClInclude Include="Ext\imgui.h" />
+    <ClInclude Include="Ext\imgui_impl_dx9.h" />
+    <ClInclude Include="Ext\imgui_impl_win32.h" />
+    <ClInclude Include="Ext\imgui_internal.h" />
+    <ClInclude Include="Ext\imstb_rectpack.h" />
+    <ClInclude Include="Ext\imstb_textedit.h" />
+    <ClInclude Include="Ext\imstb_truetype.h" />
+    <ClInclude Include="Ext\MinHook.h" />
+    <ClInclude Include="Ext\stb_image.h" />
+    <ClInclude Include="Ext\trampoline.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\AimStuff.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Animation.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CActor.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CActorPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CAudio.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CAudioStream.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CCamera.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CChat.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CChatBubble.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CConfig.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CDeathWindow.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CDialog.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CEntity.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CFont.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CFonts.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CGame.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CGangZonePool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CHelpDialog.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CHttpClient.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CInput.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CLabel.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CLabelPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CLicensePlate.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CLocalPlayer.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CMenu.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CMenuPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CNetGame.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CNetStats.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CObject.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CObjectMaterialText.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CObjectPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CObjectSelection.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Commands.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\ControllerState.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CPed.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CPickupPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CPlayerInfo.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CPlayerPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CPlayerTags.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CRemotePlayer.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CScoreboard.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CSpawnScreen.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CSrvNetStats.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CTextDraw.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CTextDrawPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CTextDrawSelection.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CVehicle.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CVehiclePool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\DebugScript.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Exception.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\GUI.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\KeyStuff.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\sampapi.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Scripting.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Settings.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\SpecialAction.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Synchronization.h" />
+    <ClInclude Include="sampapi\common\CMatrix.h" />
+    <ClInclude Include="sampapi\common\CRect.h" />
+    <ClInclude Include="sampapi\common\CVector.h" />
+    <ClInclude Include="sampapi\common\sampapi.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Ext\BitStream.cpp" />
+    <ClCompile Include="Ext\buffer.c" />
+    <ClCompile Include="Ext\hde\hde32.c" />
+    <ClCompile Include="Ext\hde\hde64.c" />
+    <ClCompile Include="Ext\hook.c" />
+    <ClCompile Include="Ext\imgui.cpp" />
+    <ClCompile Include="Ext\imgui_demo.cpp" />
+    <ClCompile Include="Ext\imgui_draw.cpp" />
+    <ClCompile Include="Ext\imgui_impl_dx9.cpp" />
+    <ClCompile Include="Ext\imgui_impl_win32.cpp" />
+    <ClCompile Include="Ext\imgui_tables.cpp" />
+    <ClCompile Include="Ext\imgui_widgets.cpp" />
+    <ClCompile Include="Ext\trampoline.c" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\AimStuff.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CActor.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CActorPool.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CAudio.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CAudioStream.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CCamera.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CChat.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CChatBubble.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CConfig.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CDeathWindow.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CDialog.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CEntity.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CFont.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CFonts.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CGame.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CGangZonePool.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CHelpDialog.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CHttpClient.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CInput.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CLabel.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CLabelPool.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CLicensePlate.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CLocalPlayer.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CMenu.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CMenuPool.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CNetGame.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CNetStats.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CObject.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CObjectMaterialText.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CObjectPool.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CObjectSelection.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\Commands.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CPed.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CPickupPool.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CPlayerInfo.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CPlayerPool.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CPlayerTags.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CRemotePlayer.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CScoreboard.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CSpawnScreen.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CSrvNetStats.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CTextDraw.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CTextDrawPool.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CTextDrawSelection.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CVehicle.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\CVehiclePool.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\DebugScript.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\Exception.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\GUI.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\KeyStuff.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\Scripting.cpp" />
+    <ClCompile Include="sampapi\0.3.7-R3-1\Settings.cpp" />
+    <ClCompile Include="sampapi\common\CRect.cpp" />
+    <ClCompile Include="sampapi\common\CVector.cpp" />
+    <ClCompile Include="sampapi\common\sampapi.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
